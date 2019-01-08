@@ -16,6 +16,12 @@ function factorial(num) {
   return num;
 }
 
+// Best Version
+
+function factorial(n) {
+  if (n < 0 || n > 12) throw new RangeError();
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
 //   Test
 
 Test.assertEquals(factorial(0), 1, "factorial for 0 is 1");
