@@ -40,3 +40,17 @@ function arithmetic(value1, value2, operation) {
     console.log("Invalid operator");
   }
 }
+
+// Better solution
+function arithmetic(a, b, operator) {
+  switch (operator) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      return a / b;
+  }
+}
