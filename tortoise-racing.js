@@ -30,15 +30,15 @@ function race(v1, v2, g) {
   let timeRemaining = g / speedDeficit;
 
   if (timeRemaining >= 0) {
-    let hours = Math.floor(timeRemaining / 3600);
+    let hours = timeRemaining / 3600;
     timeRemaining = timeRemaining % 3600;
 
-    let minutes = Math.floor(timeRemaining / 60);
+    let minutes = timeRemaining / 60;
     timeRemaining = timeRemaining % 60;
 
-    let seconds = Math.floor(timeRemaining);
+    let seconds = timeRemaining;
 
-    return [hours, minutes, seconds];
+    return [hours, minutes, seconds].map(Math.floor);
   } else {
     return;
   }
