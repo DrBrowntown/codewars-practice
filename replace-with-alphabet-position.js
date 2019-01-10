@@ -14,14 +14,12 @@
 function alphabetPosition(text) {
   let lowText = text.toLowerCase();
   let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-  let space = " ";
   let position = "";
   for (let letter in lowText) {
     if (alphabet.indexOf(lowText[letter]) < 0) {
       continue;
     } else {
-      position += alphabet.indexOf(lowText[letter]) + 1;
-      position += space;
+      position += alphabet.indexOf(lowText[letter]) + 1 + " ";
     }
   }
   position = position.slice(0, -1);
